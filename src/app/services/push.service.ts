@@ -23,23 +23,23 @@ export class PushService {
 
     // On success, we should be able to receive notifications
     PushNotifications.addListener('registration', (token: Token) => {
-      alert('Push registration success, token: ' + token.value);
+      // alert('Push registration success, token: ' + token.value);
     });
 
     // Some issue with our setup and push will not work
     PushNotifications.addListener('registrationError', (error: any) => {
-      alert('Error on registration: ' + JSON.stringify(error));
+      // alert('Error on registration: ' + JSON.stringify(error));
     });
 
     // もしアプリが開いてる状態で通知を受け取ったら
     PushNotifications.addListener('pushNotificationReceived', (notification: PushNotificationSchema) => {
-      alert('プッシュ通知を受け取りました: ' + JSON.stringify(notification));
+      // alert('プッシュ通知を受け取りました: ' + JSON.stringify(notification));
       console.log('プッシュ通知を受け取りました: ' + JSON.stringify(notification));
     });
 
     // 通知がタップされた時に発動する
     PushNotifications.addListener('pushNotificationActionPerformed', (notification: ActionPerformed) => {
-      alert('実行されたプッシュアクション: ' + JSON.stringify(notification));
+      // alert('実行されたプッシュアクション: ' + JSON.stringify(notification));
       console.log('実行されたプッシュアクション: ' + JSON.stringify(notification));
     });
   }
