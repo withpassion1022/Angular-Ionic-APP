@@ -1,0 +1,47 @@
+.tab-button-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-button-content ion-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+ion-tab-button {
+  width: calc(20% - 15px);
+}
+
+ion-tab-button ion-label {
+  text-wrap: nowrap;
+  white-space: nowrap;
+}
+
+ion-tab-button.tab-selected {
+  border-radius: 0!important;
+}
+
+ion-tab-button.home-button .tab-button-content {
+  background-color: #00af56;
+  width: 58px;
+  height: 58px;
+  color: white;
+  border-radius: 58px;
+}
+ion-tab-button.home-button .tab-button-content ion-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+ion-tab-button.home-button ion-label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+ion-tab-bar {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+  height: 60px!important;
+}

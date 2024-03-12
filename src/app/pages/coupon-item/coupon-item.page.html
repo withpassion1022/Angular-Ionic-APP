@@ -1,0 +1,28 @@
+<ion-header class="header">
+  <ion-toolbar (click)="goToCouponList()" style="font-size: 20px;">
+    <ion-icon  slot="start" name="chevron-back-outline"></ion-icon>
+    <ion-title style="padding-left: 0;">クーポン一覧へ　</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="thisCoupon" class="item-content">
+    <img [src]="imgHost + thisCoupon?.url" alt="thisCouponIMAGE" class="item-image" />
+    <div class="title">
+      {{ thisCoupon?.title }}
+    </div>
+    <div class="date">
+      ご使用期間: <br/>
+      {{ thisCoupon?.startdate.slice(0,4) + '/' + thisCoupon?.startdate.slice(4, 6) + '/' + thisCoupon?.startdate.slice(6,8)}}
+      ~ {{ thisCoupon?.enddate.slice(0,4) + '/' + thisCoupon?.enddate.slice(4, 6) + '/' + thisCoupon?.enddate.slice(6,8)}}
+    </div>
+    <div class="content">
+      {{ thisCoupon?.note }}
+    </div>
+    <ion-button (click)="getCoupon()" [disabled]="getCouponDisabled" expand="block" color="danger" class="button" >
+      使用する
+      <ion-icon name="chevron-forward-outline" class="right-icon"></ion-icon>
+    </ion-button>
+  </div>
+  <ion-spinner *ngIf="!thisCoupon"></ion-spinner>
+</ion-content>

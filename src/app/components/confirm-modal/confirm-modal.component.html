@@ -1,0 +1,16 @@
+  <ion-header>
+    <ion-toolbar style="width: 100%;">
+      <!-- <ion-buttons slot="start">
+        <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+      </ion-buttons> -->
+      <div style="text-align: center;width: 100%;text-wrap: nowrap;white-space: nowrap;">利用上の注意</div>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding" style="position: relative;">
+    <div style="width: 100%;padding-bottom: 20%;height: 80%;overflow-y: auto;">
+      1. 一度OKを押しますとバーコードは再表示できません。<br/>
+      2. お会計時に　「OK」ボタンを押してください。
+    </div>
+    <ion-button color="light" style="position: absolute;left: 10px; bottom:0; width: calc(50% - 15px);" (click)="cancel()" [strong]="true">キャンセル</ion-button>
+    <ion-button color="primary" style="position: absolute;right: 10px; bottom:0; width: calc(50% - 15px);" (click)="confirm()" [strong]="true">OK</ion-button>
+  </ion-content>

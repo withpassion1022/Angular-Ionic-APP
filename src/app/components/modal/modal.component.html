@@ -1,0 +1,13 @@
+  <ion-header>
+    <ion-toolbar>
+      <!-- <ion-buttons slot="start">
+        <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+      </ion-buttons> -->
+      <ion-title style="text-align: center;">ご案内</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding" style="position: relative;">
+      一度使用しましたので使用できません。<br/>
+      使用時刻：<br/>{{ date }}
+      <ion-button color="primary" style="position: absolute;right: 10px; bottom:10px;" (click)="confirm()" [strong]="true">OK</ion-button>
+  </ion-content>

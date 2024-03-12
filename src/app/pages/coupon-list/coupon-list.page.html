@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="backward" (click)="goToHome()">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+      ホーム
+    </div>
+    <ion-title style="text-align: center;font-size: 22px;">クーポン一覧</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="coupons" style="display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr));padding:10px;">
+    <div
+      [ngStyle]="{'opacity': calculateOpacity(coupon)}"
+      (click)="goToCoupon(coupon.id)"
+      *ngFor="let coupon of coupons" size="6" class="coupon_card"
+    >
+      <img class="img" [src]="imgHost + coupon.url" alt="coupon-img" />
+      <div class="content">
+        <div class="date">
+          利用期間：{{ coupon.startdate.slice(0,4) + '/' + coupon.startdate.slice(4, 6) + '/' + coupon.startdate.slice(6,8)}} ~
+          {{ coupon.enddate.slice(0,4) + '/' + coupon.enddate.slice(4, 6) + '/' + coupon.enddate.slice(6,8)}}
+        </div>
+        <div class="text">
+          {{ coupon.title }}
+        </div>
+      </div>
+      <div
+        *ngIf="isUsedValues[coupon.id]"
+        class="round-used">
+        済
+      </div>
+    </div>
+  </div>
+  <div *ngIf="coupons?.length === 0">No Coupons</div>
+  <div *ngIf="coupons === null" style="display: flex;justify-content: center; align-items: center;">
+    <ion-spinner></ion-spinner>
+  </div>
+</ion-content>

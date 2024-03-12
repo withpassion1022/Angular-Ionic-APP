@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="this.commonService.preventMultipleTaps('back_btn4')" id="back_btn4"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-icon name="chevron-back-outline" (click)="toBackPage('footer-tab/others')"></ion-icon> -->
+    <ion-title>会員情報</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>
+    バーコード番号:<br>
+    {{barcodeId}}
+  </h1>
+  <h1>
+    PIN番号:<br>
+    {{pinNumber}}
+  </h1>
+  <br>
+  <h2>
+    <br>機種変更などの際に会員証を再度表示するために必要となります。<br>上記の情報は大切に保管してください。<br>
+  </h2>
+  <br>
+  
+  <ion-button (click)="openEmail()" expand="block">メールで会員情報を送信</ion-button>
+
+</ion-content>

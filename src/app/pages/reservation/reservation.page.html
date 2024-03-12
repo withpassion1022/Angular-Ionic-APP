@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>予約</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div id="spinner-reservation" class="spinner">
+    <ion-spinner></ion-spinner>
+  </div>
+  <iframe id="reservation-iframe" name="reservation-iframe" class="iframe-style" src="https://docs.google.com/forms/d/e/1FAIpQLSdJuUJsumlnovFhkPoVxzYwS0tQE3u95v98xf6YWAzcvpvIGA/viewform" width="375" height="812" frameborder="0" marginheight="0" marginwidth="0" onload="document.getElementById('spinner-reservation').style.display='none';">読み込んでいます
+  </iframe> -->
+  <ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-card class="reservation-card">
+          <!-- <div class="reservation-text"> -->
+            <h1>手順１：</h1>
+            <h1>予約をご利用になられたい店舗に電話お願いします。</h1>
+            <!-- <p>その際スタッフにポイントカード番号・ご希望のお部屋・利用時間をお伝え下さい。予約はご利用の3日前より承ります。</p> -->
+            <p>その際スタッフに会員番号・ご希望のお部屋・利用時間をお伝え下さい。予約はご利用の3日前より承ります。</p>
+            <h1 class="reservation-barcode-id">会員番号：<br>{{ barcodeId }}</h1>
+            <!-- <p class="reservation-barcode-id">1111111111111</p> -->
+          <!-- </div> -->
+        </ion-card>
+      </ion-col>
+      <ion-card-title class="phone-text" (click)="callShop('06-6618-6700')">{{ '06-6618-6700' }}</ion-card-title>
+
+      <ion-list>
+        <ion-row>
+          <ion-col *ngFor="let p of shopList" size="6">
+            <!-- <ion-card (click)="toArticleBrowser(p.link)" class="news-card"> -->
+            <ion-card class="news-card">
+              <img src="{{ p.img }}" alt=""/>
+              <ion-card-header>
+                <ion-card-title>{{ p.name }}</ion-card-title>
+                <ion-card-subtitle>{{ p.address }}</ion-card-subtitle>
+                <ion-card-title class="phone-text" (click)="callShop(p.phone)">{{ p.phone }}</ion-card-title>
+                <!-- <ion-item>
+                  <a href="tel:{{p.phone}}"><ion-icon>{{p.phone}}</ion-icon></a>
+                </ion-item> -->
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="reservation-card">
+          <h1>手順２：</h1>
+          <h1>予約当日、ご利用希望時間にご来店下さい。</h1>
+          <!-- <p>受付にてポイントカードの提示をお願いします。</p> -->
+          <p>受付にて本アプリ会員証の提示をお願いします。</p>
+          <p>※予約時間を過ぎても来店されない場合、予約を取り消してさせていただきます。</p>
+          <p>※予約時間に間に合わない場合等は予約時間までにご利用店舗までご連絡お願い致します。</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="reservation-card reservation-card-memo">
+          <!-- <h1>手順２：</h1>
+          <h1>予約当日、ご利用希望時間にご来店下さい。</h1> -->
+          <p>■ご利用の際、ポイントカードの作成が必要になります。(身分証明書が必要です)</p>
+          <p>■無断で予約キャンセルされた場合、次回以降のご予約をお断りさせていただく場合がございます。</p>
+          <p>■お一人様1室のみの予約とさせていただきます。</p>
+          <p>■希望日によってはご希望のお部屋がお取り出来ない場合がございます。予めご了承下さい。</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+
+</ion-content>

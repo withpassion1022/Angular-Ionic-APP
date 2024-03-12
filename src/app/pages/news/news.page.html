@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>お知らせ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-row>
+      <ion-col *ngFor="let p of feedList" size="6">
+        <ion-card (click)="toArticleBrowser(p.link)" class="news-card">
+          <img src="{{ p.img }}" alt=""/>
+          <ion-card-header>
+            <ion-card-subtitle>{{ p.date }}</ion-card-subtitle>
+            <ion-card-title>{{ p.title }}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>

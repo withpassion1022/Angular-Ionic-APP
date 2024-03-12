@@ -1,0 +1,21 @@
+{
+    "appName": "gaudiapp",
+    "roleName": "pinpointLambdaRolecd52e327",
+    "cloudformationPolicyName": "cloudformationPolicycd52e327",
+    "cloudWatchPolicyName": "cloudWatchPolicycd52e327",
+    "pinpointPolicyName": "pinpointPolicycd52e327",
+    "authPolicyName": "pinpoint_amplify_cd52e327",
+    "unauthPolicyName": "pinpoint_amplify_cd52e327",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

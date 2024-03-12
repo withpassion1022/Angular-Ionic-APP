@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "497005520461",
+    "project_id": "asas-e4395",
+    "storage_bucket": "asas-e4395.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497005520461:android:248b38d6bf211a5c285e04",
+        "android_client_info": {
+          "package_name": "io.nikkokikaku.asasapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJNSuD7BDSKDVQ3QbAA4oQnH2PB012NWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

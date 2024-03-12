@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="this.commonService.preventMultipleTaps('back_btn2')" id="back_btn2"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-icon name="chevron-back-outline" (click)="toBackPage('home')"></ion-icon> -->
+    <ion-title>利用規約</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="grid-kiyaku">
+    <ion-row class="mb-5">
+      <div>利用規約</div>
+    </ion-row>
+    <!-- <ion-row class="row-kiyaku"> -->
+      <ion-textarea readonly
+        rows="20"
+        class="textarea-kiyaku"
+        value="{{ kiyakuText }}">
+      </ion-textarea>
+    <!-- </ion-row> -->
+    <!-- <ion-row> -->
+      <ion-button (click)="toNextPage('info')" expand="block">利用規約に同意する</ion-button>
+    <!-- </ion-row> -->
+  </ion-grid>
+
+
+</ion-content>
