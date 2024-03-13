@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="this.commonService.preventMultipleTaps('back_btn3')" id="back_btn3"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-icon name="chevron-back-outline" (click)="toBackPage('info')"></ion-icon> -->
+    <ion-title>ポイントカード設定</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-button (click)="scanTest()" expand="block">ポイントカードをお持ちの方</ion-button> -->
+  <ion-button (click)="inputPopup()" expand="block">ポイントカードをお持ちの方</ion-button>
+  <ion-button (click)="registerRequest()" expand="block" (click)="this.commonService.preventMultipleTaps('register_btn1')" id="register_btn1">ポイントカードをお持ちでない方</ion-button>
+  <ion-button (click)="toNextPage('footer-tab/card')" expand="block" id="register-test" hidden>会員証ページへ（テスト用）</ion-button>
+
+</ion-content>

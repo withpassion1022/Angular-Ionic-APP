@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gaudiapp-dev-123726-authRole",
+      "UnauthRoleArn": "arn:aws:iam::688788919366:role/amplify-gaudiapp-dev-123726-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::688788919366:role/amplify-gaudiapp-dev-123726-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-gaudiapp-dev-123726-deployment",
+      "UnauthRoleName": "amplify-gaudiapp-dev-123726-unauthRole",
+      "StackName": "amplify-gaudiapp-dev-123726",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:688788919366:stack/amplify-gaudiapp-dev-123726/53498800-dd42-11eb-89ec-0e230e5b27df",
+      "AmplifyAppId": "d1zevl4gqcuv53"
+    },
+    "categories": {
+      "auth": {
+        "cognito69c259cd": {}
+      }
+    }
+  }
+}

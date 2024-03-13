@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "525729333186",
+    "project_id": "myapp-31627",
+    "storage_bucket": "myapp-31627.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525729333186:android:5cadac9b907e4bc845e05b",
+        "android_client_info": {
+          "package_name": "com.asas.mytest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQiPoY1V1tSNB95DHhaRfzuQSeajDMdIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="this.commonService.preventMultipleTaps('back_btn1')" id="back_btn1"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-icon name="chevron-back-outline" (click)="toBackPage('kiyaku')"></ion-icon> -->
+    <ion-title>アンケート</ion-title>
+    <ion-label (click)="skipPage('point-register')" slot="end">スキップ</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-item class="info-item">
+    <ion-label>
+      性別:
+    </ion-label>
+    <ion-select placeholder="選択" [(ngModel)]="gender" [interfaceOptions]="customActionSheet('性別')" interface="action-sheet" required>
+      <ion-select-option value="男性">男性</ion-select-option>
+      <ion-select-option value="女性">女性</ion-select-option>
+      <ion-select-option value="選択しない">選択しない</ion-select-option>
+    </ion-select>
+  </ion-item> -->
+  <ion-item class="info-item">
+    <ion-label>
+      <!-- <ion-icon name="calendar-outline"></ion-icon> -->
+      生年月:
+    </ion-label>
+    <!-- <ion-datetime displayFormat="YYYY年MM月DD日" placeholder="選択" [(ngModel)]="birthdate" required></ion-datetime> -->
+    <ion-datetime displayFormat="YYYY年MM月" placeholder="選択" [(ngModel)]="birthdate" required></ion-datetime>
+  </ion-item>
+  <ion-item class="info-item">
+    <ion-label>
+      <!-- <ion-icon name="walk-outline"></ion-icon> -->
+      ご利用頻度:
+    </ion-label>
+    <ion-select placeholder="選択" [(ngModel)]="frequency" [interfaceOptions]="customActionSheet('ご利用頻度')" interface="action-sheet" required>
+      <ion-select-option value="週3回以上">週3回以上</ion-select-option>
+      <ion-select-option value="週1回">週1回</ion-select-option>
+      <ion-select-option value="月1回">月1回</ion-select-option>
+      <ion-select-option value="年数回">年数回</ion-select-option>
+      <ion-select-option value="殆ど無い">殆ど無い</ion-select-option>
+      <ion-select-option value="行ったことが無い">行ったことが無い</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="info-item">
+    <ion-label>
+      郵便番号:
+    </ion-label>
+    <ion-input type="tel" maxlength="7" minlength="7" [(ngModel)]="postalCode"></ion-input>
+  </ion-item>
+  <!-- <ion-item>
+    <ion-button size="large" (click)="showPicker()">
+      Single Column Ionic Picker
+  </ion-button>
+  </ion-item> -->
+  <ion-row>
+    <ion-button (click)="toNextPage('point-register')">登録</ion-button>
+  </ion-row>
+
+</ion-content>

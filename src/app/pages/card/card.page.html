@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">ホーム</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card size="12" class="ion-card-1">
+    <svg id = "barcode"></svg>
+    <br>
+    <div class="div-text">お会計時に会員バーコードをご提示ください。</div>
+    <ion-card class="point-card">
+      <ion-label class="label">保有ポイント</ion-label>
+      <ion-item lines="none" class="main">
+        <div class="point-amount-text" id="point-amount-text">
+          {{pointAmount}} P
+        </div>
+      </ion-item>
+    </ion-card>
+  </ion-card>
+  <button (click)="goToCouponList()" class="coupon_button pulse">お得なクーポン一覧を見る</button>
+  
+
+
+  <!-- <ion-card class="reservation-card">
+    <ion-label>保有ポイント</ion-label>
+    <ion-item lines="none">
+      <div class="point-amount-text">100 P</div>
+    </ion-item>
+  </ion-card> -->
+
+  <ion-card class="reservation-card reservation-card-memo">
+    <ion-list lines="none">
+      <ion-item>
+        <!-- ※1ポイント1円で、1ポイントからご利用いただけます。 -->
+        ※1ポイント1円で、10ポイントからご利用いただけます。
+      </ion-item>
+      <!-- <ion-item>
+        ※保有ポイントはレシートかレジにてご確認ください。
+      </ion-item> -->
+      <ion-item>
+        <!-- ※ポイントの有効期限は最後に獲得した日から６ヶ月になります。 -->
+        ※ポイントの有効期限は最後に獲得した日から1年になります。
+      </ion-item>
+    </ion-list>
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="this.commonService.preventMultipleTaps('back_btn6')" id="back_btn6"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-icon name="chevron-back-outline" (click)="toBackPage('home')"></ion-icon> -->
+    <ion-title>ログイン</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>バーコード番号(13桁)</ion-label>
+      <ion-input type="text" [(ngModel)]="barcodeId" required autofocus="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>PIN番号</ion-label>
+      <ion-input type="text" [(ngModel)]="pinNumber" required></ion-input>
+    </ion-item>
+    <!-- <ion-item> -->
+      <ion-button (click)="logIn()" expand="block">ログイン</ion-button>
+    <!-- </ion-item> -->
+  </ion-list>
+
+</ion-content>

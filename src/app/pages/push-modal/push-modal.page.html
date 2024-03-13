@@ -1,0 +1,28 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>push-modal</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding class="main-view">
+  <div class="close-button">
+
+    <!-- <ion-icon name="close-outline"></ion-icon> -->
+  </div>
+  <div class="circle" (click)="closeModal()">
+    <ion-icon name="close-outline" class="close-icon"></ion-icon>
+  </div>
+
+  <div class="modal_content">
+    <!-- <div class="circle" (click)="closeModal()">
+      <ion-icon name="close-outline" class="close-icon"></ion-icon>
+    </div> -->
+    <div class="modal-content">
+      <ion-img [src]="image"></ion-img>
+      <h1>{{ title }}</h1>
+      <h2>{{ text }}</h2>
+      <p>{{ option }}</p>
+    </div>
+</div>
+
+</ion-content>

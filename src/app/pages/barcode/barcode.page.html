@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <div (click)="goToCouponList()" class="backward">
+      <ion-icon  slot="start" name="chevron-back-outline"></ion-icon>
+      <ion-title style="padding-left: 0;">クーポン一覧へ　</ion-title>
+    </div>
+    <ion-title class="barcode-page-title">クーポン</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="position: relative;">
+  <ion-grid>
+    <ion-row style="display: flex; flex-direction: column;align-items: center;">
+      <div style="margin-top: 20px;">{{ thisCoupon?.title }}</div>
+      <svg id = "barcodeCoupon"></svg>
+
+      <ion-button  color="light" style="position: absolute; bottom:10px; width: 100%;" (click)="goToCouponList()" [strong]="true">
+        <ion-icon name="chevron-back-outline" style="position: absolute; left: 0px;"></ion-icon>
+        クーポンを閉じる
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

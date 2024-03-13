@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="this.commonService.preventMultipleTaps('back_btn5')" id="back_btn5"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-icon name="chevron-back-outline" (click)="toBackPage('footer-tab/others')"></ion-icon> -->
+    <ion-title>ライセンス</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let license of licenses | keyvalue" (click)="onLicenseClick(license.value)">
+      <ion-label class="license-label">
+        <h1>{{ license.key }} {{ license.value['publisher'] }} {{ license.value['licenses'] }}</h1>
+        <p>{{ license.value['repository'] }}</p>
+      </ion-label>
+      <!-- <div>{{ license.key }} {{ license.value['publisher'] }} {{ license.value['licenses'] }}</div>
+      <br>
+      <div>{{ license.value['repository'] }}</div> -->
+    </ion-item>
+  </ion-list>
+
+</ion-content>
