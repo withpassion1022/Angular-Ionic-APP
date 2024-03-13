@@ -171,7 +171,7 @@ export class AccountCheckPage implements OnInit {
     await alert.present();
   }
 
-  stopAlert() {
+  stopalert() {
     this.storageService.setNativeStorageValue('stop_alert', true);
   }
 
@@ -190,7 +190,7 @@ export class AccountCheckPage implements OnInit {
     Preferences.set({ key: 'my_info', value: JSON.stringify(testAccount) }).then(
       () => {
         console.log('Stored item!');
-        // alert('Stored item!');
+        // //alert('Stored item!');
       },
       (error) => console.error('Error storing item', error),
     );

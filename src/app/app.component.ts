@@ -39,32 +39,32 @@ export class AppComponent {
         if (result.receive === 'granted') {
           // Register with Apple / Google to receive push via APNS/FCM
           PushNotifications.register();
-          alert("OK");
+          //alert("OK");
         } else {
           // Show some error
         }
       });
 
       PushNotifications.addListener('registration', (token: Token) => {
-        alert('Push registration success, token: ' + token.value);
+        //alert('Push registration success, token: ' + token.value);
         console.error(token.value);
       });
 
       PushNotifications.addListener('registrationError', (error: any) => {
-        alert('Error on registration: ' + JSON.stringify(error));
+        //alert('Error on registration: ' + JSON.stringify(error));
       });
 
       PushNotifications.addListener(
         'pushNotificationReceived',
         (notification: PushNotificationSchema) => {
-          alert('Push received: ' + JSON.stringify(notification));
+          //alert('Push received: ' + JSON.stringify(notification));
         },
       );
 
       PushNotifications.addListener(
         'pushNotificationActionPerformed',
         (notification: ActionPerformed) => {
-          alert('Push action performed: ' + JSON.stringify(notification));
+          //alert('Push action performed: ' + JSON.stringify(notification));
         },
       );
     });

@@ -72,16 +72,16 @@ export class PointRegisterPage implements OnInit {
             if (alertData.numInput) {
               const barcodeId = alertData.numInput;
               if (barcodeId === '') {
-                alert('バーコード番号を入力してください。');
+                //alert('バーコード番号を入力してください。');
                 return;
               }
               if (barcodeId.length !== 13) {
-                alert('13桁のバーコード番号を入力してください。');
+                //alert('13桁のバーコード番号を入力してください。');
                 return;
               }
               const checkDigitNum = this.checkdigit(barcodeId);
               if (Number(barcodeId.substr(-1)) !== checkDigitNum) {
-                alert('再度バーコード番号を確認し、正しく入力してください。');
+                //alert('再度バーコード番号を確認し、正しく入力してください。');
                 return;
               }
               const existJson = {
@@ -90,7 +90,7 @@ export class PointRegisterPage implements OnInit {
               const alreadyExist = await this.apiService.requestAPI('ALREADY_EXIST', existJson);
               console.log('alreadyExist:' + JSON.stringify(alreadyExist));
               if (alreadyExist) {
-                alert('こちらのバーコード番号は既に登録されています。');
+                //alert('こちらのバーコード番号は既に登録されています。');
                 console.log('this barcode_id is already registered');
                 return;
               }

@@ -22,10 +22,10 @@ export class LoginPage implements OnInit {
 
   async logIn() {
     if (!this.barcodeId) {
-      alert('バーコード番号が入力されていません');
+      //alert('バーコード番号が入力されていません');
       return;
     } else if (!this.pinNumber) {
-      alert('PIN番号が入力されていません');
+      //alert('PIN番号が入力されていません');
       return;
     }
     const keys = {
@@ -41,7 +41,7 @@ export class LoginPage implements OnInit {
       this.storageService.setNativeStorageValue('my_info', returnValue);
       this.commonService.toNextPage('footer-tab/card');
     } else {
-      alert('バーコード番号またはPIN番号が正しく入力されていません');
+      //alert('バーコード番号またはPIN番号が正しく入力されていません');
     }
   }
 }

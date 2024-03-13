@@ -66,7 +66,7 @@ export class CardPage implements OnInit, AfterViewInit {
     this.pointAmount = JSON.stringify(this.pointAmount);
 
     if (this.pointAmount === 'error' || typeof this.pointAmount != 'number') {
-      // alert('保有ポイント読み込みに失敗しました');
+      // //alert('保有ポイント読み込みに失敗しました');
       // this.pointAmount = new BehaviorSubject(0);
       this.pointAmount = '';
     } else if (this.pointAmount === null) {

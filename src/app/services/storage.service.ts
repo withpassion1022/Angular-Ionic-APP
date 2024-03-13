@@ -14,7 +14,7 @@ export class StorageService {
     Preferences.set({ key, value: JSON.stringify(value) }).then(
       () => {
         console.log('Stored item!');
-        // alert('Stored item!');
+        // //alert('Stored item!');
       },
       (error) => console.error('Error storing item', error),
     );
@@ -27,14 +27,14 @@ export class StorageService {
           let data = JSON.parse(ret.value);
           console.log(data);
           console.log(JSON.stringify(data));
-          // alert(data);
-          // alert(JSON.stringify(data));
+          // //alert(data);
+          // //alert(JSON.stringify(data));
           // return data
           resolve(data);
         },
         (error) => {
           console.error(error);
-          // alert('data is not in native storage');
+          // //alert('data is not in native storage');
           // return 'error'
           resolve('error');
         },
